@@ -1,0 +1,34 @@
+bareer token
+AAAAAAAAAAAAAAAAAAAAAL4s1AEAAAAAsTPTF2aYu1%2BNk%2BVhJWbcm1J7FMI%3D6xuB47cYKAWlSKxf9sW9Rpc69CChJkEWnAXOKnVMCgT9BkzAxr
+apikey 
+TMZJEW1VnfKgHMNXVCpS45BRH
+
+api sce key 
+cLiiXx3HAGuuaYQGz96Nwi21oQuRDHSTTctyayeAzh22gtWQbR
+
+
+access token
+1840168909397471233-lUjqRWcBTnR8HAM3Kpxj7LZtP535aA
+
+accses token Secert
+sperLaS6LZ8MFN09rtjnDK8yDRCY1zD9cufTcu4bN8m1Z
+
+#  Chosen your event type (e.g., elections)
+
+# Domain - Sports
+
+#  Defined data source (Twitter via API)
+
+
+
+#  Decided sentiment categories (basic)
+
+# Basic Sentiment: Positive, Negative, Neutral
+
+
+#  Outlined dashboard features
+
+#  Identified target users
+
+#  Noted technical and ethical constraints
+import tweepy
