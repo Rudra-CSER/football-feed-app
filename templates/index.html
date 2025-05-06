@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Football News & Tweets</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+        h1 { color: #333; }
+        .section { margin-bottom: 40px; }
+        .card {
+            background: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #007BFF;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .timestamp { font-size: 0.9em; color: gray; }
+        .source { font-size: 0.95em; color: #555; }
+    </style>
+</head>
+<body>
+
+    <h1>⚽ Football Feed</h1>
+
+    <div class="section">
+        <h2>🕊️ Latest Tweets</h2>
+        {% if tweets %}
+            {% for tweet in tweets %}
+                <div class="card">
+                    <p>{{ tweet.text }}</p>
+                    <div class="timestamp">By {{ tweet.author }} at {{ tweet.created_at }}</div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No tweets found.</p>
+        {% endif %}
+    </div>
+
+    <div class="section">
+        <h2>📰 Latest News</h2>
+        {% if news %}
+            {% for article in news %}
+                <div class="card">
+                    <a href="{{ article.url }}" target="_blank"><strong>{{ article.title }}</strong></a>
+                    <div class="source">Source: {{ article.source }}</div>
+                    <div class="timestamp">Published: {{ article.published_at }}</div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No news articles available.</p>
+        {% endif %}
+    </div>
+
+    
+    <div class="section">
+        <h2>📱 Latest Reddit Posts</h2>
+        {% if reddit_posts %}
+            {% for post in reddit_posts %}
+                <div class="card">
+                    <a href="{{ post.url }}" target="_blank"><strong>{{ post.title }}</strong></a>
+                    <div class="source">By {{ post.author }}</div>
+                    <div class="timestamp">Posted at {{ post.created_at }}</div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No Reddit posts available.</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
